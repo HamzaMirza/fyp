@@ -1,0 +1,69 @@
+html:not(.osx) ::-webkit-scrollbar 
+{
+    width: 10px;
+}
+html:not(.osx) ::-webkit-scrollbar-track-piece 
+{
+    background-color: #eee;
+    box-shadow:inset 0 0 10px rgba(0,0,0,0.2);
+}
+html:not(.osx) ::-webkit-scrollbar-thumb:vertical 
+{
+  opacity:0.4;
+  background-color: rgba(0,0,0,0.3);
+  border-radius:2px;
+}
+.page-header{
+	border: 0px;
+    box-shadow: 0px 2px 0px orange;
+    text-align: center;
+    text-shadow: 1px 2px 1px navajowhite;
+
+}
+.nav-pills>li>a {
+    border-radius: 0px;
+}
+
+.nav-pills.nav-stacked{
+	
+	background: white;
+	font-weight: bold;
+
+}
+.nav>li>a:focus, .nav>li>a:hover{
+	border-bottom: 2px solid deepskyblue;
+}
+}
+#main{
+	background: #f2f3f4;
+	padding-right:0px;
+}
+.table-bordered
+{
+    border-color: rgb(277, 0, 0);
+}
+.row-footer{
+	background: deepskyblue;
+}
+#a{
+	color: white;
+    background: rgba(255,0,0,.78);
+}
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    min-width: 80px;
+}
+#abc{
+	background:#f9fafc;
+}
+.panel-footer{
+	background-color: deepskyblue;
+}
+
+.panel-default>.panel-heading {
+	background-color: green;
+}
+.panel-title{
+	text-align: center;
+}
