@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+body{
+font-family: 'Roboto', sans-serif;	
+}
+.navbar-brand
+{
+	margin-bottom: 11px !important;
+}
+h1,h2,h3,h4,h5,h6{
+font-family: 'Roboto', sans-serif;
+}
+a,
+a:active,
+a:focus,
+a:hover{
+	outline:none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+a:hover{
+	text-decoration:underline;
+}
+.pro_btn {
+position:relative;
+top:20px;
+}
+
+#banner,#login_div{
+background:url("../images/bg.png") no-repeat;
+height:735px;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.mobile_icon{
+margin-top:60px;
+float:right;
+}
+.banner_content{
+margin-top:80px;
+}
+.banner_content h1{
+color:#fff;
+}
+.banner_content p{
+color:#fff;
+font-size:16px;
+margin-top:20px;
+}
+.app_store{
+margin-top:50px;	
+}
+.app_store ul{
+padding:0;
+}
+.app_store ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+    width: 40%;
+	position: absolute;
+    left: 35%;
+}
+#feature_one{
+margin-top:60px;
+}
+#feature_two{
+margin-top:60px;
+}
+#feature_three{
+margin-top:60px;
+}
+.screen_div{
+float:right;
+}	
+.feature_title h2{
+line-height:40px;
+color:#343F9B;
+margin-top:0;
+padding-top:60px;
+font-weight:400;
+}
+.feature_title{
+background:rgb(251,251,251);
+margin:auto;
+text-align:center;
+min-height:605px;
+padding-top:60px;
+}
+.feature_content{
+margin-top:90px;
+clear:both;
+}
+.feature_content p{
+font-size:22px;
+letter-spacing:0.1em;
+color:#343F9B;
+font-weight:300;
+line-height:35px;
+}
+.feature_btn {
+    background-color:#343f9b;
+    color: #fff;
+    padding: 12px 70px;
+    font-size: 15px;
+	position:relative;
+	top:70px;
+	border:1px solid transparent;
+}
+.feature_btn:hover{
+text-decoration:none;
+color:#343f9b;
+background-color:#fff;
+border:1px solid #343f9b
+}
+.feature_btn_second {
+    background-color:#343f9b;
+    color: #fff;
+    padding: 12px 70px;
+    font-size: 15px;
+	position:relative;
+	top:30px;
+	border:1px solid transparent;
+}
+.feature_btn_second:hover{
+text-decoration:none;
+color:#343f9b;
+background-color:#fff;
+border:1px solid #343f9b
+}
+#test_title{
+margin:auto;
+text-align:center;
+margin-top:20px;
+}
+.section_title h3{
+font-size:30px;
+color:rgb(52, 63, 155);
+font-weight:400;
+}
+.section_title i{
+margin-left:10px;	
+}
+.test_div{
+background:rgb(251,251,251);
+margin-top:10px;
+min-height:200px;
+}
+ul.bxslider{
+padding-top:30px;
+}
+footer{
+background-color:#3040a0;
+}
+.footer_section{
+padding-top:30px;
+margin:auto;
+text-align:center;
+}
+.social_media ul{
+padding:0;
+padding-top:15px;
+}
+.social_media ul li{
+list-style:none;
+display:inline-block;
+margin-right:20px;
+}
+.social_media ul li a{
+transition:padding 0.5s ease 0s;
+}
+.social_media ul li a:hover{
+
+}
+.social_media ul li i{
+color:#fff;
+font-size:24px;
+}
+.footer_app p{
+color:#fff;
+font-size:17px;
+}
+.footer_app ul{
+padding:0;
+margin:0;
+}
+.footer_app ul li{
+list-style:none;
+display:inline-block;
+margin-right:20px;
+width:35%;
+}
+
+.social_media{
+padding-top:20px;
+border-left: 1px solid #fff;
+ min-height: 90px;	
+}
+.footer_logo {
+    padding-top: 30px;
+    border-right: 1px solid #fff;
+    min-height: 90px;
+}
+.testimonial{
+    text-align: center;
+}
+.testimonial .pic{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.testimonial .pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.testimonial .testimonial-title{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(52, 63, 155);
+    margin: 0 0 30px 0;
+	margin-top:15px;
+}
+.testimonial .testimonial-title small{
+    font-size: 15px;
+    font-weight: 600;
+    color: #787878;
+}
+.testimonial .description{
+    font-size: 16px;
+    color: #1d1d1d;
+    line-height: 27px;
+    position: relative;
+    margin: 0;
+	font-style:italic;
+}
+.testimonial .description:before{
+    content: "\f10d";
+    font-family: fontawesome;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 46%;
+    font-size: 20px;
+    color: #fa7921;
+    line-height:33px;
+    border: 2px solid #fa7921;
+}
+.owl-theme .owl-controls .owl-page span{
+    background: #ffc107;
+    opacity: 1;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls .owl-page:hover span{
+}
+#testimonial-slider{
+margin-top:20px;
+}
+
+
+/*Login CSS*/
+.login_border{
+background-color: white;
+width:800px;
+margin:auto;
+border:1px solid #ddd;
+margin-top:60px;
+box-shadow:0 2px 3px #ccc;
+margin-bottom:30px;
+}
+.page_title h3{
+font-size:25px;
+font-weight:500;
+text-align:center;
+color:#1d1d1d;
+padding-top:10px;
+}
+.feature_list {
+    padding: 0 70px;
+    width: 750px;
+    margin: auto;
+	margin-bottom:40px;
+}
+.form_div{
+margin-top:30px;
+}
+.form_div input, .form_div .select{
+border-radius:0;
+height:50px;
+}
+.check{
+height:auto !important;
+}
+.checkbox label{
+font-size:15px;
+}
+.form_div button{
+background-color:#ffc107;
+border-color:#ffc107;
+color:#1d1d1d;
+font-size:20px;
+width:100%;
+border-radius:0;
+padding:8px;
+font-weight:500;
+}
+.form_div button:hover{
+background-color:#3040a0;
+border-color:#3040a0;
+color:#fff;
+}
+.form_div button:focus{
+background-color:#3040a0;
+border-color:#3040a0;
+color:#fff;
+}
+.form_div button:active{
+background-color:#3040a0;
+border-color:#3040a0;
+color:#fff;
+}
+.feature_list ul{
+padding:0;
+margin:0;
+margin-top:25px;
+}
+.feature_list ul li{
+list-style:none;
+font-size:18px;
+color:#1d1d1d;
+margin-bottom:10px;
+font-weight:500;
+}
+.feature_list ul li img {
+    margin-right: 5px;
+    position: relative;
+    top: -5px;
+}
+.forgot{
+margin:auto;
+text-align:center;
+margin-top:10px;
+}
+.forgot a{
+color:#008489;
+font-size:17px;
+}
+.forgot a:hover{
+text-decoration:none;
+}
+.create_link{
+margin-top:25px;
+border-top:1px solid #ddd;
+padding-top:15px;
+}
+.create_link p{
+font-size:16px;
+}
+.create_link a{
+font-size:16px;
+}
+.create_link a:hover{
+text-decoration:none;
+}
+.form_div .input-group{
+margin-bottom:20px;
+}
+.inner-addon {
+  position: relative;
+  margin-bottom:20px;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+  font-size:22px;
+  color:#767575;
+  top:5px;
+}
+.fa_lg{
+margin-right:5px;
+}
+
+/* align glyph */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
+
+
+.add_phone_div{
+margin-bottom:10px;
+padding:0 15px;
+}
+.add_phone_div a{
+color:#1d1d1d;
+font-weight:500;
+font-size:16px;
+}
+.add_phone_div a:hover{
+text-decoration:none;
+}
+.add_phone_div i{
+margin-right:7px;
+font-size:18px;
+}
+.activities_div{
+padding:2px 20px;
+}
+.activities_div h4{
+color:#008489;
+font-weight:500;
+font-size:19px;
+}
+
+.container_new {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+	padding-top:3px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	font-weight:500;
+}
+
+/* Hide the browser's default checkbox */
+.container_new input {
+    position: absolute;
+    opacity: 0;
+    z-index:2;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+	border:1px solid #ddd;
+	z-index:2;
+}
+
+/* On mouse-over, add a grey background color */
+.container_new:hover input ~ .checkmark {
+    border:1px solid #ddd;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_new input:checked ~ .checkmark {
+    background-color: #008489;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container_new input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_new .checkmark:after {
+    left: 9px;
+    top: 3px;
+    width: 7px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+ul.checkbox_list li{
+list-style:none;
+display:inline-block;
+width:30%;
+}
+ul.checkbox_list li:last-child{
+width:100%;
+}
+#input {
+    opacity: 1;
+    width: 320px;
+    display: inline-block;
+    height: 35px;
+    margin-left: 14px;
+    margin-top: -5px;
+	
+}
+.opening_hrs{
+padding:2px 20px;	
+}
+.opening_hrs h4{
+color:#008489;
+font-weight:500;
+font-size:19px;
+}
+.opening_hrs ul{
+text-align:right;
+position:relative;
+left:30px;
+margin:0;
+}
+.opening_hrs label {
+    font-weight: 500;
+    float: left;
+    font-size: 16px;
+    padding-top: 5px;
+}
+.opening_hrs ul li{
+list-style:none;
+display:inline-block;
+width:35%;
+margin-right:10px;
+}
+.opening_hrs .form-group{
+margin-bottom:10px;
+}
+.list_view{
+margin-top:25px;
+}
+.feature_list textarea{
+border-radius:0;
+resize:none;
+}
+.feature_list select{
+background:url("../images/arrow_down.png") no-repeat;
+border-radius:0;
+background-position:95% 55%;
+height:35px;
+-webkit-appearance: none;
+   -moz-appearance: none;
+   appearance:      none;
+}
+.image_upload{
+margin:auto;
+text-align:center;
+margin-top:20px;
+}
+.image_upload i {
+    font-size: 30px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    line-height: 60px;
+    color: #777;
+	cursor:pointer;
+}
+.image_upload i:hover{
+border: 1px solid #ffc107;
+background-color: #ffc107;
+color:#1d1d1d;
+}
+.image_upload p{
+font-size:18px;
+margin-top:7px;
+font-weight:500;
+}
+	
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 80px;
+    cursor: pointer;
+}
+.alert-success{
+margin-top:10px;
+}
+.alert-success a:hover{
+text-decoration:none;	
+}
+.error_div{
+color:#ff0000;
+margin-bottom:5px;
+font-weight:600;
+font-size:15px
+}
+
+.hide{
+display:none;
+}
+.term_link{
+color:#1d1d1d;
+}
+.term_link:hover{
+text-decoration:none;
+color:#000;	
+}

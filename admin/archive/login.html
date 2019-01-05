@@ -1,0 +1,266 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootsnav.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+	<title>THE SMART INTERVIEWER</title>
+	<link rel='shortcut icon' type='image/x-icon' href='assets/images/favicon.png' />
+  </head>
+  <body class="hide_now">
+	<header>
+		<!-- Start Navigation -->
+		<nav class="navbar navbar-default navbar-sticky bootsnav">
+
+			<!-- Start Top Search -->
+			<div class="top-search">
+				<div class="container">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-search"></i></span>
+						<input type="text" class="form-control" placeholder="Search">
+						<span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+					</div>
+				</div>
+			</div>
+			<!-- End Top Search -->
+
+			<div class="container">            
+				<!-- Start Atribute Navigation -->
+				<div class="attr-nav">
+					<ul>
+						<li class="pro_btn"><a href="login.html" target="_blank">Login</a></li>
+					</ul>
+				</div>
+				<!-- End Atribute Navigation -->
+
+				<!-- Start Header Navigation -->
+				<div class="navbar-header">
+					<!--button type="button" class="navbar-toggle nav_tab" data-toggle="collapse" data-target="#navbar-menu">
+						<i class="fa fa-bars"></i>
+					</button -->
+					<a class="navbar-brand"  href="index.html"><img src="assets/images/logo.png" class="img-responsive" alt=""></a>
+				</div>
+				<!-- End Header Navigation -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+					<li><a></a></li><li><a></a></li><li><a></a></li><li><a></a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div>   
+		</nav>
+    <!-- End Navigation -->
+	</header>
+	
+	
+	<section id="login_div">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-md-offset-1">
+					<div class="login_border">
+						<div class="page_title">
+							<h3>Start now<br> to grow your Business</h3>
+						</div>
+						<div class="feature_list">
+							<ul class="hidden-xs hidden-sm">
+								<li><img src="assets/images/arrow_tick.png"/> Get High Profile Employees</li>
+								<li><img src="assets/images/arrow_tick.png"/> Better Plans for Business</li>
+							</ul>
+							<div class="form_div">
+								<form  method="POST"  enctype="multipart/form-data">
+								<div class="alert alert-success hide" role="alert"  id="successAlert">
+									  <a class="alert-link" id="errorMsg"></a>
+								</div>
+								  <div class="inner-addon right-addon">
+									  <i class="glyphicon fa fa-envelope-o"></i>
+									  <input type="email" class="form-control" placeholder="Email Address" name="email" required="true"/>
+								  </div>
+								  <div class="inner-addon right-addon">
+									  <i class="glyphicon fa fa-lock fa_lg"></i>
+									  <input type="password" class="form-control" placeholder="Password" name="password" required="true"/>
+								  </div>
+								  <label class="container_new hide"> Remember me
+									<input type="checkbox" name="doRememberFlag">
+									<span class="checkmark"></span>
+								  </label>
+								  <button type="submit" class="btn btn-default" style="display:none" id="submitButton">Signin</button>
+								  <button type="button" class="btn btn-default"  onClick="reqLogin()">Signin</button>
+								  <div class="forgot">
+									  <a href="forgotpassword.html">You forgot your password? </a>
+									  <div class="create_link">
+										<p>If you don't have an account? <a href="register.html">Create one now</a></p>
+									  </div>
+								  </div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-sm-3">
+					<div class="footer_section">
+						<div class="footer_logo">
+							<a  href="index.html" ><img src="assets/images/footer-logo.png"/></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-sm-6">
+					<div class="footer_section">
+						<div class="footer_app">
+							<p>THE SMART INTERVIEWER</p>
+							<ul>
+								<li><a href="#" ><img src="assets/images/googleplay.jpg" class="img-responsive" alt="google play store"/></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-3">
+					<div class="footer_section">
+						<div class="social_media">
+							<ul>
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a  href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</footer>
+	
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootsnav.js"></script>
+  <script>
+   $('form').bind('keypress', function(e) {
+            if(e.keyCode==13){
+			   e.preventDefault();
+                 reqLogin();
+             }
+        });
+	$('document').bind('keypress', function(e) {
+            if(e.keyCode==13){
+                 reqLogin();
+             }
+        });
+		var company,user;
+  $( document ).ready(function() 
+  {
+		company=JSON.parse(localStorage.getItem('company'));
+		user=JSON.parse(localStorage.getItem('user'));
+		console.log(user,",",company);		
+		if(user!=null && company !=null)
+		{
+			if(user.token!="" && company.CompanyID!="")
+			{
+				location.href="./admin/dashboard.html";
+			}
+		}
+		
+	});
+  function reqLogin()
+ {
+	let isSet=false;
+	var createAllErrors = function() 
+	{
+		var form = $(this);
+		var showAllErrorMessages = function() {
+		// Find all invalid fields within the form.
+		var invalidFields = form.find( ":invalid" ).each( function( index, node ) {
+			$('#submitButton').click();
+		});
+		if(invalidFields.length<=0)
+			isSet=true;
+	};
+		showAllErrorMessages();
+	};
+	$('form').each(createAllErrors);
+	if(isSet)
+	{
+		ajaxCall_login();
+	}
+	
+ }
+ function ajaxCall_login()
+ {
+	$.ajax({ 
+					type: 'POST', 
+					url: 'https://www.boaton.ch/api/userlogin.php',  
+					dataType: 'json',
+					data:{'email':$('input[name=email]').val(),'password':$('input[name=password]').val()},
+					success: function (data)
+					{ 
+								console.log("",data);
+								userInfo=data;
+								let uid=data.User.UserID;
+								
+							$.ajax({ 	  //Company Details
+								url: 'https://www.boaton.ch/api/companydetails.php',
+								type: 'POST',
+								headers : {
+								"X-ACCESS-TOKEN" :data.AccessToken
+								},
+								dataType:'json',
+								data: {company_id: data.User.CompanyID},
+								success: function (data)
+								{ 
+									localStorage.setItem("user", JSON.stringify({userName:userInfo.User.UserName,email:userInfo.User.Email,isLogin:"1",token:userInfo.AccessToken}));
+									localStorage.setItem("company", JSON.stringify(
+									{
+										companyName:data.Company.CompanyName,
+										street_number:data.Company.Street,
+										route:"",
+										locality:data.Company.City,
+										administrative_area_level_1:"",
+										country:data.Company.Country,
+										postal_code:data.Company.PostalCode,
+										lat:data.Company.Lat,
+										lng:data.Company.Lng,
+										opening_hours:{'weekday_text':data.Company.openingtimes},
+										phone:data.Company.Phone1,
+										CompanyID:data.Company.CompanyID,
+										UserID:uid
+									}
+									));
+									location.href="./admin/dashboard.html";
+								},
+								error: function(xhr, status, error)
+								{
+										showError("No company id found for user");
+										console.log("Failed to fetch details of company",xhr,error);
+										
+								}
+							});
+								
+					},
+					error: function(xhr, status, error)
+					{
+						
+							showError("Incorrect Credentials"+error);
+					}
+		  });
+ }
+ 
+ function showError(msg)
+ {
+	
+	$("#errorMsg").html(msg);
+	$("#successAlert").removeClass("hide");
+ }
+  </script>
+  </body>
+  </html>

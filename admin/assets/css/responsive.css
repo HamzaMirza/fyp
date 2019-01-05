@@ -1,0 +1,407 @@
+@media (min-width: 150px) and (max-width: 479px) {
+.navbar-brand img{
+width:100px;
+}	
+.pro_btn {
+    position: relative;
+    top: 15px;
+	display:none !important;
+}
+.attr-nav > ul > li > a {
+    padding: 5px 10px 10px;
+    padding-left: 10px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}	
+nav.navbar.bootsnav .navbar-brand {
+    display: inline-block;
+    float: left !important;
+    margin: 0 !important;
+    position: relative;
+    left: -15px;
+}
+#banner {
+    background: url(../images/bg.png) no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height:auto;
+}
+.banner_content {
+    margin-top: 40px;
+}
+.mobile_icon {
+    margin-top: 60px;
+    float: none;
+    margin-bottom: 30px;
+}
+
+nav.navbar.bootsnav .navbar-toggle{
+color:#3040a0;
+margin-right:0;
+}
+.footer_app ul {
+    padding: 0;
+    margin: 0;
+    padding-top:0px;
+}
+.social_media ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+.mobile_icon img{
+margin:auto;
+text-align:center;
+}
+.login_border{
+width:100%;
+margin-top:30px;
+}
+.feature_list {
+    padding: 0 20px;
+    width: 100%;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+.create_link a {
+    font-size: 17px;
+    display: inherit;
+}
+.feature_list ul li{
+font-size:14px;	
+}
+
+.forgot a {
+    color: #008489;
+    font-size: 16px;
+}
+.page_title h3{
+font-size:22px;
+line-height:30px;
+padding:5px 10px;
+}
+ul.checkbox_list li {
+    list-style: none;
+    display: inline-block;
+    width: 100%;
+}
+#input {
+    opacity: 1;
+    width: 100%;
+    display: inherit;
+    height: 35px;
+    margin-left: 0;
+    margin-top: 10px;
+}
+.opening_hrs {
+    padding: 2px 20px;
+    margin-top: 30px;
+}
+.opening_hrs ul li{
+width:50%;
+}
+.app_store {
+    margin-top: 30px;
+}
+.app_store ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 0px;
+    width: 49%;
+}
+.footer_section{
+padding-top:0;
+}
+.footer_app ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 0;
+    width: 49%;
+}
+.social_media ul {
+    padding: 0;
+    padding-top: 0px;
+    margin: 0;
+}
+.social_media {
+    padding-top: 30px;
+    border-left: none;
+    min-height: 50px;
+    margin-left: 2px;
+}
+.footer_logo{
+border-right:none;
+float:left;
+}
+.footer_app{
+float:left;	
+}
+.footer_logo img{
+width:120px;
+margin-right:5px;
+
+}
+.container_new{
+font-size:14px;
+}
+.inner-addon {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+	
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+.navbar-brand img{
+width:100px;
+}
+
+
+.footer_logo{
+border-right:none;
+float:left;
+}
+.footer_app{
+float:left;	
+}
+.footer_logo img{
+margin-right:5px;
+
+}	
+.pro_btn {
+    position: relative;
+    top: 15px;
+	display:none !important;
+}
+.attr-nav > ul > li > a {
+    padding: 5px 10px 10px;
+    padding-left: 10px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}	
+nav.navbar.bootsnav .navbar-brand {
+    display: inline-block;
+    float: left !important;
+    margin: 0 !important;
+    position: relative;
+    left: -15px;
+}
+#banner {
+    background: url(../images/bg.png) no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height:auto;
+}
+.banner_content {
+    margin-top: 40px;
+}
+.mobile_icon {
+    margin-top: 60px;
+    float: none;
+    margin-bottom: 30px;
+}
+.mobile_icon img{
+margin:auto;
+text-align:center;
+}
+.footer_logo{
+border-right:none;
+}
+.social_media{
+border-left:none;
+	
+}
+nav.navbar.bootsnav .navbar-toggle{
+color:#3040a0;
+margin-right:0;
+}
+.footer_app ul {
+    padding: 0;
+    margin: 0;
+    padding-top:0px;
+}	
+.login_border{
+width:100%;
+margin-top:30px;
+}
+.feature_list {
+    padding: 0 20px;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.create_link a {
+    font-size: 17px;
+    display: inherit;
+}
+
+.forgot a {
+    color: #008489;
+    font-size: 16px;
+}
+.page_title h3{
+font-size:24px;
+padding:5px 10px;
+}
+ul.checkbox_list li {
+    list-style: none;
+    display: inline-block;
+    width: 48%;
+}
+#input {
+    opacity: 1;
+    width: 50%;
+    display: inline-block;
+    height: 35px;
+    margin-left: 20px;
+    margin-top: -5px;
+}
+.opening_hrs {
+    padding: 2px 20px;
+}
+.opening_hrs ul li{
+width:33%;
+}
+.footer_section{
+padding-top:0;
+}
+.footer_app ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 0;
+    width: 40%;
+}
+.app_store ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 0;
+    width: 40%;
+}
+.social_media ul {
+    padding: 0;
+    padding-top: 0px;
+    margin: 0;
+}
+.social_media ul li{
+margin-right:15px;
+margin-top:10px;
+}
+.social_media {
+    padding-top: 30px;
+    border-left: none;
+    min-height: 60px;
+    margin: auto;
+    float: right;
+    position: absolute;
+    right: 0;
+}
+.footer_logo{
+border-right:none;
+}
+.app_store {
+    margin-top: 30px;
+}
+
+	
+	
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+.navbar-brand img{
+width:130px;
+}	
+.pro_btn {
+    position: relative;
+    top: 15px;
+}
+.attr-nav > ul > li > a {
+    padding: 5px 10px 10px;
+    padding-left: 10px !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}	
+nav.navbar.bootsnav .navbar-brand {
+    display: inline-block;
+    float: none !important;
+    margin: 0 !important;
+    position: relative;
+    left: -20px;
+}	
+nav.navbar.bootsnav .navbar-toggle{
+color:#3040a0;
+}
+.footer_app ul li{
+margin-right:5px;
+}	
+.social_media ul li{
+margin-right:7px;	
+}
+.app_store ul li{
+margin-right:0;
+margin-bottom:10px;	
+width:49%;
+}
+.login_border{
+width:100%;
+margin-top:30px;
+}
+.feature_list {
+    padding: 0 50px;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.col-md-offset-1{
+margin-left:0;	
+}
+#banner{
+height:850px;
+}
+.hide_now{
+overflow:hidden;
+}
+.nav_tab{
+float:left !important;
+}
+
+	
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	
+.login_border{
+width:100%;
+margin-top:30px;
+}
+.feature_list {
+    padding: 0 70px;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}	
+.col-md-offset-1{
+margin-left:0;	
+}	
+#banner{
+height:570px;
+}
+.hide_now{
+overflow:hidden;
+}
+.mobile_icon img{
+height:450px;
+}
+
+	
+}

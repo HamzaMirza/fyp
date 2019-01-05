@@ -1,191 +1,121 @@
-<?php
-@session_start();
-if(!isset($_SESSION['userName'])){
-
-	echo "<script>window.open('admin_login.php','_self');</script>";
-}
-else{
-	include("conn/conn.php");
-	$response="1";
-	$s_userName=$_SESSION['userName'];
-
-	$query1="select * from session where s_userName='$s_userName'";
-	$run_q=mysqli_query($conn,$query1);
-
-	$checking=mysqli_num_rows($run_q);
-	if($checking==0){
-		$query2="insert into session(session_response,s_userName,time,checking) values('$response','$s_userName',now(),'yes');";
-		$run_que=mysqli_query($conn,$query2);
-
-	}
-	else{
-	$query3="update session set session_response='$response' where s_userName='$s_userName'";
-		$update_run=mysqli_query($conn,$query3);
-	}
+<?php 
+ //include("./scripts/chk_loginsession.php");
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootsnav.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+	<title>THE SMART INTERVIEWER</title>
+	<link rel='shortcut icon' type='image/x-icon' href='assets/images/favicon.png' />
+  </head>
+  <body class="hide_now">
+	<header>
+		<!-- Start Navigation -->
+		<nav class="navbar navbar-default navbar-sticky bootsnav">
 
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<?php echo "<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'> "?>
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<script src="https://use.fontawesome.com/2068589c33.js"></script>
-<?php echo '<link rel="stylesheet" href="styles/admin_styles.css" media="all" />'; ?>
-	<title>Admin Area</title>
-<style>
-nav,.navbar-default{
-min-height: 58px!important;
-    height: 80px!important;
-    padding: 15px 10px!important;
-    background: rgba(255,49,93,1)!important;}
-.navbar-brand1
-{
-  color:white !important;
-font-size: 40px;
-    letter-spacing: 10px;
-    text-shadow: 1px 2px 3px black;
-    font-family: fantasy, monospace;
-	  float: none !important; 
-         line-height: 40px  !important; 
-}
-.navbar-nav>li a
-{
-  color:white !important;
-}
-#side
-{
-    margin-top: 25px;
-    border: 2px solid red;
-    border-left: none;
-    border-bottom: none;
-    border-top: none;
-    vertical-align: middle;
- margin-bottom: 25px;
-    top: 100%;
-}
-@media screen and (max-width:786px)
-{
-.navbar-brand1
-{
-  color:white !important;
-font-size: 20px;
-    letter-spacing: 2px;
-    text-shadow: 1px 2px 3px black;
-    font-family: fantasy, monospace;
-	  float: none !important; 
-         line-height: 10px  !important; 
-}
-nav,.navbar-default{
-
-    height: 48px!important;
-    padding: 15px 10px!important;
-    background: rgba(255,49,93,1)!important;}
-.navbar-nav
-{
-	    margin-top: -10px;
-}
-#side
-{
-    margin-top: 25px;
- margin-bottom: 25px;
-    border-bottom: 2px solid red;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    vertical-align: middle;
-}
-}
-
-</style>
-	</head>
-		
-	<body>
-<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<span style="text-align:center;"> 
-				<a class="navbar-brand1" >ADMIN PANEL</a>
-</span>
-		
-		
-			<div class="col-xs-1 col-sm-1 pull-right" id="menus">
-				<ul class="nav navbar-nav navbar-right">
-
-					<li ><a href="logout.php" class="pull-right">LOGOUT </a>
-	
-					</li>
-				
-				
-				</ul>
+			<!-- Start Top Search -->
+			<div class="top-search">
+				<div class="container">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-search"></i></span>
+						<input type="text" class="form-control" placeholder="Search">
+						<span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+					</div>
+				</div>
 			</div>
-			
-		</div
+			<!-- End Top Search -->
 
-		<div class="row" >
-			<div class="col-xs-12 col-md-2" id="side">
-				<ul class="nav nav-pills nav-stacked">
-
-				<li role="presentation"><a href="index.php?view_survey_data">View Survey Data</a></li>
-				<li role="presentation"><a href="index.php?view_Users">View All Users</a></li>
-				<li role="presentation"><a href="index.php?addAdmin">Add Admins</a></li>
+			<div class="container">            
+				<!-- Start Atribute Navigation -->
+				<div class="attr-nav">
+					<ul>
+						<li class="pro_btn"><a href="index.php?login">Login</a></li>
 					</ul>
+				</div>
+				<!-- End Atribute Navigation -->
 
+				<!-- Start Header Navigation -->
+				<div class="navbar-header">
+					<!--button type="button" class="navbar-toggle nav_tab" data-toggle="collapse" data-target="#navbar-menu">
+						<i class="fa fa-bars"></i>
+					</button -->
+					<a class="navbar-brand"  href="index.php"><img src="assets/images/logo.png" class="img-responsive" alt=""></a>
+				</div>
+				<!-- End Header Navigation -->
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+					<li><a></a></li><li><a></a></li><li><a></a></li><li><a></a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div>   
+		</nav>
+    <!-- End Navigation -->
+	</header>
+	
+	
+	<section id="login_div">
+		<!-- Content -->
+		<?php 
+			if(isset($_GET['login']))
+				include("login.php");
+			else if(isset($_GET['forgotpassword']))
+				include("forgotpassword.php");
+			else if(isset($_GET['register']))
+				include("register.php");
+			else
+				include("home.php");
+		?>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-sm-3">
+					<div class="footer_section">
+						<div class="footer_logo">
+							<a  href="index.php" ><img src="assets/images/footer-logo.png"/></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-sm-6">
+					<div class="footer_section">
+						<div class="footer_app">
+							<p>THE SMART INTERVIEWER</p>
+							<ul>
+								<li><a href="#" ><img src="assets/images/googleplay.jpg" class="img-responsive" alt="google play store"/></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-3">
+					<div class="footer_section">
+						<div class="social_media">
+							<ul>
+								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a  href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>	
 			</div>
-
-			<div class="col-xs-10 col-md-10" style="margin-top:25px;">
-
-				<?php
-				if(!isset($_GET['view_survey_data']) AND !isset($_GET['view_Users']) AND !isset($_GET['addAdmin'])){
-
-					echo " <h2 style='text-align:center;color:red;font-family:Impact'>Welcome Admin</h2>";
-				} 
-
-					include("conn/conn.php");
-
-
-						function test_input($data) {
-						$data = trim($data);
-  						$data = stripslashes($data);
- 						$data = htmlspecialchars($data);
- 						 return $data;
-                          }
-
-					if(isset($_GET['view_survey_data'])){
-
-						include("view_survey_data.php");
-
-					}
-					if(isset($_GET['view_Users'])){
-						include("view_users.php");
-					}
-					if(isset($_GET['addAdmin'])){
-						include("addAdmin.php");
-					}
-					
-
-				?>
-
-
-			</div>
-
 		</div>
-
-
-
-
-</body>
-</html>
-<?php
-  }
-?>
+	</footer>
+  
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootsnav.js"></script>
+  <script src="scripts/js/index.js"></script>
+  </body>
+  </html>
+	
