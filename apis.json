@@ -1,0 +1,625 @@
+{
+	"info": 
+	{
+		"project_name": "THE_SMART_INTERVIEWER",
+		"date": "09-JAN-2019"
+	},
+	"services": 
+	[
+		//Authentication service
+		{
+			"name": "login",
+			"description": "authenticating a user",
+			"request": 
+			{
+				"method": "POST",
+				"body": 
+				{
+					"mode": "formdata",
+					"parameters": 
+					[
+						{
+							"key": "username",
+							"value": "hamzamirza347@gmail.com",
+							"description": "Email address of the user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"description": "password of the user",
+							"type": "text"
+						}
+					]
+				},
+				"url": 
+				{
+							"base_url": "http://localhost:8000/api/user/",
+							"file_name": "login",
+				},
+				"response": 
+				{
+					"success": 1,
+					"message": "User successfully authenticated",
+					"data": 
+					[
+						{
+							"id": 13,
+							"fname": null,
+							"username": "test@gmail.com",
+							"password": "123",
+							"lname": null,
+							"address": null,
+							"education": null,
+							"cv": null,
+							"picture": null
+						}
+					]
+				}
+			}
+		},
+		//Registration service
+		{
+			"name": "signup",
+			"description": "registering a user",
+			"request": 
+			{
+				"method": "POST",
+				"body": 
+				{
+					"mode": "formdata",
+					"parameters": 
+					[
+						{
+							"key": "username",
+							"value": "hamzamirza347@gmail.com",
+							"description": "Email address of the user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"description": "password of the user",
+							"type": "text"
+						}
+					]
+				},
+				"url": 
+				{
+							"base_url": "http://localhost:8000/api/user/",
+							"file_name": "signup",
+				},
+				"response": 
+				{
+					"success": 1,
+					"message": "User successfully registered",
+					"data": 
+					[
+						{
+							"id": 14,
+							"fname": null,
+							"username": "tester@gmail.com",
+							"password": "123",
+							"lname": null,
+							"address": null,
+							"education": null,
+							"cv": null,
+							"picture": null
+						}
+					]
+				}
+			}
+		},
+		//Updating user details service
+		{
+			"name": "details",
+			"description": "updating user details",
+			"request": 
+			{
+				"method": "POST",
+				"body": 
+				{
+					"mode": "formdata",
+					"parameters": 
+					[
+						{
+							"key": "id",
+							"value": "1",
+							"description": "id of the user",
+							"type": "text"
+						},
+						{
+							"key": "fname",
+							"value": "hamza",
+							"description": "first name of the user",
+							"type": "text"
+						},
+						{
+							"key": "lname",
+							"value": "mirza",
+							"description": "last name of the user",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Gulistan-e-Johar, Karachi, Pakistan",
+							"description": "address of the user",
+							"type": "text"
+						},
+						{
+							"key": "education",
+							"value": "bachelors",
+							"description": "education of the user",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "ascii.png",
+							"description": "picture of the user",
+							"type": "text"
+						},
+						{
+							"key": "cv",
+							"value": "cv_muhammad_hamza_mirza.pdf",
+							"description": "cv of the user",
+							"type": "text"
+						}
+					]
+				},
+				"url": 
+				{
+							"base_url": "http://localhost:8000/api/user/",
+							"file_name": "details",
+				},
+				"response": 
+				{
+					"success": 1,
+					"message": "User details successfully updated",
+					"data": 
+					[
+						{
+							"id": 1,
+							"fname": "hamza",
+							"username": "hamzamirza@gmail.com",
+							"password": "123",
+							"lname": "mirza",
+							"address": "Gulistan-e-Johar, Karachi, Pakistan",
+							"education": "bachelors",
+							"cv": "/public/docs/teTOGIsIlgNwQfsUJSfzmnOomY0pqNZWvjP8Rz5Y/cv_muhammad_hamza_mirza.pdf",
+							"picture": "/public/images/users/0p9P3Gyyzj6jIRnYm0xYtW3HWq2l0hhywOnShfxs/asciifull.png"
+						}
+					]
+				}
+			}
+		},
+		//Inserting user test scores service
+		{
+			"name": "testscore",
+			"description": "inserting user test scores",
+			"request": 
+			{
+				"method": "POST",
+				"body": 
+				{
+					"mode": "formdata",
+					"parameters": 
+					[
+						{
+							"key": "uid",
+							"value": "1",
+							"description": "user id",
+							"type": "text"
+						},
+						{
+							"key": "cid",
+							"value": "14",
+							"description": "company id",
+							"type": "text"
+						},
+						{
+							"key": "vid",
+							"value": "1",
+							"description": "vacany id",
+							"type": "text"
+						},
+						{
+							"key": "score",
+							"value": "5",
+							"description": "company id",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2019-01-04 23:25:06",
+							"description": "date at which test is given",
+							"type": "text"
+						},
+						{
+							"key": "cv",
+							"value": "cv_muhammad_hamza_mirza.doc",
+							"description": "cv of the applicant",
+							"type": "text"
+						}
+					]
+				},
+				"url": 
+				{
+							"base_url": "http://localhost:8000/api/user/",
+							"file_name": "testscore",
+				},
+				"response": 
+				{
+					"success": 1,
+					"message": "User test scores successfully inserted",
+					"data": 
+					[
+						{
+							"id": 2,
+							"cid": 14,
+							"uid": 1,
+							"score": 5,
+							"date": "2019-01-04 23:25:06",
+							"vacancyid": 1,
+							"cv": "/public/docs/t3gboRu9Y1rnTSpFTchT2Pqbi5irbt1Rs0n4rapr/cv_muhammad_hamza_mirza.doc"
+						}
+					]
+				}
+			}
+		},
+		//Fetching all designations service
+		{
+			"name": "designation",
+			"description": "fetching all designations",
+			"request": 
+			{
+				"method": "POST",
+				"body": 
+				{
+					"mode": "formdata",
+					"parameters": 
+					[
+					]
+				},
+				"url": 
+				{
+							"base_url": "http://localhost:8000/api/get/",
+							"file_name": "designation",
+				},
+				"response": 
+				{
+					"success": 1,
+					"message": "Successfully Fetched",
+					"data": 
+					[
+						{
+							"id": 1,
+							"name": "Senior"
+						}
+					]
+				}
+			}
+		},
+		//Fetching all job roles service
+		{
+			"name": "roles",
+			"description": "fetching all job roles",
+			"request": 
+			{
+				"method": "POST",
+				"body": 
+				{
+					"mode": "formdata",
+					"parameters": 
+					[
+					]
+				},
+				"url": 
+				{
+							"base_url": "http://localhost:8000/api/get/",
+							"file_name": "roles",
+				},
+				"response": 
+				{
+					"success": 1,
+					"message": "Successfully Fetched",
+					"data": 
+					[
+						{
+							"id": 1,
+							"name": "SQA"
+						}
+					]
+				}
+			}
+		},
+		//Fetching all companies service
+		{
+			"name": "companies",
+			"description": "fetching all companies",
+			"request": 
+			{
+				"method": "POST",
+				"body": 
+				{
+					"mode": "formdata",
+					"parameters": 
+					[
+					]
+				},
+				"url": 
+				{
+							"base_url": "http://localhost:8000/api/get/",
+							"file_name": "companies",
+				},
+				"response": 
+				{
+					"success": 1,
+					"message": "Successfully Fetched",
+					"data": 
+					[
+						{
+							"id": 14,
+							"name": "folio3",
+							"cat_id": 1,
+							"description": null,
+							"address": null
+						}
+					]
+				}
+			}
+		},
+		//Fetching specific company's details service
+		{
+			"name": "company",
+			"description": "fetching specific company's details",
+			"request": 
+			{
+				"method": "POST",
+				"body": 
+				{
+					"mode": "formdata",
+					"parameters": 
+					[
+						{
+							"key": "id",
+							"value": "14",
+							"description": "id of the company",
+							"type": "text"
+						}
+					]
+				},
+				"url": 
+				{
+							"base_url": "http://localhost:8000/api/get/",
+							"file_name": "company",
+				},
+				"response": 
+				{
+					"success": 1,
+					"message": "Successfully Fetched",
+					"data": 
+					[
+						{
+							"id": 14,
+							"name": "folio3",
+							"cat_id": 1,
+							"description": null,
+							"address": null
+						}
+					]
+				}
+			}
+		},
+		//Fetching all company categories service
+		{
+			"name": "categories",
+			"description": "fetching all company categories",
+			"request": 
+			{
+				"method": "POST",
+				"body": 
+				{
+					"mode": "formdata",
+					"parameters": 
+					[
+					]
+				},
+				"url": 
+				{
+							"base_url": "http://localhost:8000/api/get/",
+							"file_name": "categories",
+				},
+				"response": 
+				{
+					"success": 1,
+					"message": "Successfully Fetched",
+					"data": 
+					[
+						{
+							"id": 1,
+							"name": "IT"
+						}
+					]
+				}
+			}
+		},
+		//Fetching specific company's open vacancies service
+		{
+			"name": "vacany",
+			"description": "fetching specific company's details",
+			"request": 
+			{
+				"method": "POST",
+				"body": 
+				{
+					"mode": "formdata",
+					"parameters": 
+					[
+						{
+							"key": "id",
+							"value": "14",
+							"description": "id of the company",
+							"type": "text"
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"description": "offset from which the vacancies will start retrieving",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"description": "maximum number of vacancies to be fetched",
+							"type": "text"
+						}
+					]
+				},
+				"url": 
+				{
+							"base_url": "http://localhost:8000/api/get/",
+							"file_name": "vacany",
+				},
+				"response": 
+				{
+					"success": 1,
+					"message": "Successfully Fetched",
+					"data": 
+					[
+						{
+							"id": 3,
+							"cid": 14,
+							"lastDate": "2019-01-14 23:25:06",
+							"Date": "2019-01-04 23:25:06",
+							"seats": 3,
+							"minexperience": 3.5,
+							"city": "Hyderabad",
+							"avgsalary": 680000,
+							"state": 1,
+							"designationid": 1,
+							"roletypeid": 1,
+							"jobRole": "SQA",
+							"designation": "Senior"
+						}
+					]
+				}
+			}
+		},
+		//Fetching all vacancies service
+		{
+			"name": "vacancies",
+			"description": "fetching all vacancies",
+			"request": 
+			{
+				"method": "POST",
+				"body": 
+				{
+					"mode": "formdata",
+					"parameters": 
+					[
+						{
+							"key": "offset",
+							"value": "0",
+							"description": "offset from which the data will start retrieving",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"description": "maximum number of vacancies to be fetched",
+							"type": "text"
+						}
+					]
+				},
+				"url": 
+				{
+							"base_url": "http://localhost:8000/api/get/",
+							"file_name": "vacancies",
+				},
+				"response": 
+				{
+					"success": 1,
+					"message": "Successfully Fetched",
+					"data": 
+					[
+						{
+							"id": 3,
+							"cid": 14,
+							"lastDate": "2019-01-14 23:25:06",
+							"Date": "2019-01-04 23:25:06",
+							"seats": 3,
+							"minexperience": 3.5,
+							"city": "Hyderabad",
+							"avgsalary": 680000,
+							"state": 1,
+							"designationid": 1,
+							"roletypeid": 1,
+							"jobRole": "SQA",
+							"designation": "Senior"
+						}
+					]
+				}
+			}
+		},
+		//Fetching all company questions service
+		{
+			"name": "questions",
+			"description": "fetching all company questions",
+			"request": 
+			{
+				"method": "POST",
+				"body": 
+				{
+					"mode": "formdata",
+					"parameters": 
+					[
+						{
+							"key": "cid",
+							"value": "14",
+							"description": "company id",
+							"type": "text"
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"description": "offset from which the questions will start retrieving",
+							"type": "text"
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"description": "maximum number of questions to be fetched",
+							"type": "text"
+						}
+					]
+				},
+				"url": 
+				{
+							"base_url": "http://localhost:8000/api/get/",
+							"file_name": "questions",
+				},
+				"response": 
+				{
+					"success": 1,
+					"message": "Successfully Fetched",
+					"data": 
+					[
+						{
+							"id": 1,
+							"question": "what is the size of int in java",
+							"ans1": "4 Bytes",
+							"ans2": "8 Bytes",
+							"ans3": "16 Bytes",
+							"ans4": "32 Bytes",
+							"correct": "4 Bytes",
+							"draft": 0,
+							"time": "2019-01-04 23:25:06",
+							"c_id": 14
+						}
+					]
+				}
+			}
+		}
+		
+	]
+}
