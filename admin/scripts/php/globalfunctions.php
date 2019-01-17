@@ -26,11 +26,29 @@ function getAdminId($userName,$conn)
 	}
 	return $id;
 }
-
+function getCompanyIdByAdminName($userName,$conn)
+{
+	$id=-1;
+	$result = mysqli_query($conn,"select * from admin where userName='$userName'");
+	if($result)
+	{
+		if (mysqli_num_rows($result) > 0) 
+		{
+			while ($row = mysqli_fetch_array($result)) 
+				$id=$row["c_id"];
+			return $id;
+		}
+		else
+		{
+			return $id;
+		}
+	}
+	return $id;
+}
 function getCompanyId($company,$conn)
 {
 	$id=-1;
-	$result = mysqli_query($conn,"select * from campany where name='$company'");
+	$result = mysqli_query($conn,"select * from company where name='$company'");
 	if($result)
 	{
 		if (mysqli_num_rows($result) > 0) 
@@ -48,7 +66,7 @@ function getCompanyId($company,$conn)
 }
 function checkCompany($company,$conn,&$response,$category_id)
 {
-	$result = mysqli_query($conn,"select * from campany where name='$company' and cat_id=$category_id");
+	$result = mysqli_query($conn,"select * from company where name='$company' and cat_id=$category_id");
 	if($result)
 	{
 		if (mysqli_num_rows($result) > 0) 
@@ -59,6 +77,19 @@ function checkCompany($company,$conn,&$response,$category_id)
 		else
 		{
 			return false;
+		}
+	}
+	return false;
+}
+function checkUserOnly($userName,$conn,&$response)
+{
+	$result = mysqli_query($conn,"select * from admin where userName='$userName' ");
+	if($result)
+	{
+		if (mysqli_num_rows($result) > 0) 
+		{
+			updateResponse($response,0,"User already exists");
+			return true;
 		}
 	}
 	return false;
@@ -102,13 +133,14 @@ function insertUser($userName,$password,$company_id,$conn,&$response,$name)
 	}
 				
 }
-function insertCompany($userName,$password,$company,$conn,&$response,$category_id,$name)
+function insertCompany($userName,$password,$company,$conn,&$response,$category_id,$name,$description, $address)
 {
-	$query="insert into campany(name,cat_id) values('".$company."',".$category_id.")";
+	$query="insert into company(description,address,name,cat_id) values('".$description."','".$address."','".$company."',".$category_id.")";
 	$result=mysqli_query($conn,$query);
 	if($result)
 	{
 		$company_id=getCompanyId($company,$conn);
+		$response["cid"]=$company_id;
 		insertUser($userName,$password,$company_id,$conn,$response,$name);
 	}
 	else

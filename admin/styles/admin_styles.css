@@ -1,3 +1,12 @@
+.panel-heading
+{
+    color: white !important;
+    background: red !important;
+}
+.panel-footer {
+    background-color: brown;
+}
+
 html:not(.osx) ::-webkit-scrollbar 
 {
     width: 10px;

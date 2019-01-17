@@ -1,6 +1,3 @@
-<?php 
- //include("./scripts/chk_loginsession.php");
-?>
 <!Doctype html>
 <html lang="en">
   <head>
@@ -115,6 +112,8 @@
   <script src="assets/js/jquery.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/bootsnav.js"></script>
+ <script src="scripts/js/user.js"></script>
+   <script src="scripts/js/functionBinding.js"></script>
   <script src="scripts/js/index.js"></script>
   </body>
   </html>

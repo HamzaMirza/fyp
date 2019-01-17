@@ -30,7 +30,8 @@ position:relative;
 top:20px;
 }
 
-#banner,#login_div{
+
+#login_div{
 background:url("../images/bg.png") no-repeat;
 height:735px;
 background-attachment: fixed;
@@ -616,4 +617,30 @@ color:#1d1d1d;
 .term_link:hover{
 text-decoration:none;
 color:#000;	
+}
+#questionTable,#applicantTable{text-align:center;}
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    min-width: 80px;
+text-align:center;
+}
+.page-header
+{
+border: 0px;
+    box-shadow: 0px 2px 0px orange;
+    text-align: center;
+    text-shadow: 1px 2px 1px navajowhite;}
+#a{
+	color: black;
+	background:#ffc107;
+}
+td ul
+{
+	text-align: left;
+    font-size: 13px;
+}
+#applicant_body .cvButton
+{
+	  margin: 0 auto;
 }

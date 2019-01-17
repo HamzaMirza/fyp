@@ -1,3 +1,4 @@
+
 	<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-md-offset-1">
@@ -21,11 +22,19 @@
 								  </div>
 								  <div class="inner-addon right-addon">
 									  <i class="glyphicon fa fa-home "></i>
-									  <input type="text" class="form-control" placeholder="Company name" name="company" required id="autocomplete" placeholder="Enter your address" />
+									  <input type="text" class="form-control" placeholder="Company name" name="company" required id="company" placeholder="Enter Your Company Name" />
 								  </div>
 								  <div class="inner-addon right-addon">
 									  <i class="glyphicon fa fa-lock fa_lg"></i>
 									  <input type="password" class="form-control" placeholder="Create Password" name="password" required/>
+								  </div>
+								  <div class="inner-addon right-addon">
+									  <i class="glyphicon fa fa-home "></i>
+									  <input type="text" class="form-control" placeholder="Company address" name="address" required id="address" placeholder="Enter Your Company Address" />
+								  </div>
+								  <div class="inner-addon right-addon">
+									  <i class="glyphicon fa fa-home "></i>
+									  <textarea placeholder="Company Description" rows="4"  class="form-control"  name="description" required id="description"></textarea>
 								  </div>
 								  <div class="inner-addon right-addon">
 									  <i class="glyphicon fa fa-lock fa_lg"></i>

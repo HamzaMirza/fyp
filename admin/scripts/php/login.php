@@ -5,6 +5,7 @@
 		$response = array();
 		$response["success"] = 0;
 		$response["message"] ="";
+		$response["cid"] =-1;
 		
 		$userName=$_REQUEST['email'];
 		$password=$_REQUEST['password'];
@@ -16,11 +17,16 @@
 		}
 		if(checkAdminPassword($userName,$password,$conn,$response))
 		{
-						updateResponse($response,1,"Logged In");
+						
 						$aid=getAdminId($userName,$conn);
 						updateAdminSession($aid,1,$conn);
 						session_start();
 						$_SESSION['userName']=$userName;
+						
+						$cid=getCompanyIdByAdminName($userName,$conn);
+						
+						$response["cid"]=$cid;
+						updateResponse($response,1,"Logged In");
 		}
 		else
 		{

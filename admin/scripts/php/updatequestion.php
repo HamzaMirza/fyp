@@ -11,13 +11,13 @@
 	$c=$_REQUEST['correct'];
 	$d=$_REQUEST['draft'];
 	$t=$_REQUEST['time'];
-	$id=$_REQUEST['c_id'];
-	if(	$result = mysqli_query($conn,"INSERT INTO `questions`( `question`, `ans1`, `ans2`, `ans3`, `ans4`, `correct`,`draft`,`time`,`c_id`) VALUES ( '$q', '$a1', '$a2',	'$a3', '$a4', '$c', $d, '$t', $id )") )
+	$id=$_REQUEST['id'];
+	if(	$result = mysqli_query($conn,"update `questions` set `question`='$q',`ans1`='$a1',`ans2`='$a2',`ans3`='$a3',`ans4`='$a4',`correct`='$c',`draft`=$d,`time`='$t' where id=$id") )
 	{
 		$response["success"]=1;
-		$response["message"] = "Successfully Inserted Question";
+		$response["message"] = "Successfully Updated Question";
 	}
 	else 
-		$response["message"] = "Failed To Insert Question";
+		$response["message"] = "Failed To update Question";
 	echo json_encode($response);
 ?>
