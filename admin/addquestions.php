@@ -1,7 +1,7 @@
 <div class="container">
  <h1 class="page-header">Add Questions</h1>
 <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-10 form_div">
                <form class="form-horizontal" method="POST"  enctype="multipart/form-data">
 				<div class="alert alert-danger hide" role="alert"  id="dangerAlert">
 						<a class="alert-link" id="errorMsg"></a>

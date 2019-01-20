@@ -11,8 +11,8 @@ function getFileName() {
 
 var filename=getFileName();
 	
-
-$(document).ready(function () {
+function preventDefaultFormAction(){
+	console.log("A");
 	$('form').bind('keypress', function (e) { /* binding form with the enter key */
 		if (e.keyCode == 13) {
 			e.preventDefault();
@@ -24,6 +24,9 @@ $(document).ready(function () {
 			callsRespectiveFunctionOnBinding(filename);
 		}
 	});
+}
+$(document).ready(function () {
+	preventDefaultFormAction();
 
 });
 
@@ -40,6 +43,8 @@ function callsRespectiveFunctionOnBinding(filename) {
 		reqAddQuestion();
 	else if(filename.includes('admin.php?admin_add'))
 		reqAddAdmin();
+	else if(filename.includes('admin.php?vacancy_add'))
+		reqAddVacancy();
 }
 
 //Check Form Fields
@@ -60,6 +65,7 @@ function checkForm()
 		showAllErrorMessages();
 	};
 	$('form').each(createAllErrors);
+	console.log(isSet)
 	return isSet;
 }
 

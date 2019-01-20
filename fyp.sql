@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2019 at 07:51 PM
+-- Generation Time: Jan 20, 2019 at 06:08 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -39,6 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `userName`, `password`, `c_id`, `name`) VALUES
+(24, 'a1223@g.com', '123', 15, 'rolko'),
 (23, 'hamzamirza@gmail.com', '123', 14, 'hamza'),
 (21, 'ba@g.comaaasaadada', '123', 12, 'nn323343fsdf');
 
@@ -62,7 +63,8 @@ CREATE TABLE `admin_session` (
 INSERT INTO `admin_session` (`id`, `session_response`, `time`, `aid`) VALUES
 (1, 0, '2019-01-04 23:25:06', 21),
 (2, 1, '2019-01-05 20:43:58', 22),
-(3, 0, '2019-01-05 20:45:07', 23);
+(3, 1, '2019-01-05 20:45:07', 23),
+(4, 1, '2019-01-14 11:11:35', 24);
 
 -- --------------------------------------------------------
 
@@ -105,7 +107,8 @@ CREATE TABLE `company` (
 INSERT INTO `company` (`id`, `name`, `cat_id`, `description`, `address`) VALUES
 (12, '3433425546', 1, NULL, NULL),
 (13, '', 1, NULL, NULL),
-(14, 'folio3', 1, NULL, NULL);
+(14, 'folio3', 1, NULL, NULL),
+(15, 'rojkj', 1, 'asdandnj', 'bhajs');
 
 -- --------------------------------------------------------
 
@@ -150,8 +153,17 @@ CREATE TABLE `questions` (
 --
 
 INSERT INTO `questions` (`id`, `question`, `ans1`, `ans2`, `ans3`, `ans4`, `correct`, `draft`, `time`, `c_id`) VALUES
-(1, 'what is the size of int in java', '4 Bytes', '8 Bytes', '16 Bytes', '32 Bytes', '4 Bytes', 0, '2019-01-04 23:25:06', 14),
-(2, 'what is the size of float in java', '4 Bytes', '8 Bytes', '16 Bytes', '32 Bytes', '4 Bytes', 0, '2019-01-04 23:25:06', 14);
+(1, 'what is the size of int in java', '4 Bytes', '8 Bytes', '16 Bytes', '32 Bytes', '4 Bytes', 1, '2019-01-04 23:25:06', 14),
+(2, 'what is the size of float in java', '4 Bytes', '8 Bytes', '16 Bytes', '32 Bytes', '4 Bytes', 0, '2019-01-04 23:25:06', 14),
+(3, 'can u here me?', 'you', 'me', 'they', 'were', 'you', 1, '00:08', 14),
+(4, 'what is size of int in C language in Bytes232', 'AA', 'BB', 'CC', 'DD', 'BB', 1, '00:08', 14),
+(5, 'what is size of int in C language in Bytes232', 'AA', 'BB', 'CC', 'DD', 'BB', 1, '00:08', 14),
+(6, 'what is size of int in C language in Bytes232a343', 'AA', 'BB', 'CC', 'DD', 'BB', 1, '00:08', 14),
+(7, 'bas', '123', 'e43', 'sdf', 'sd', 'sdf', 1, '00:11', 14),
+(8, 'erjwne', 'jdsh', 'jshdfj', 'sjdhfj', 'jhj', 'jhj', 0, '00:08', 14),
+(9, 'Checking to see if it owrd', 'answer1', 'opt2', 'pot3', 'kor34', 'opt2', 0, '00:18', 14),
+(10, 'ndndn', 'nndnd', 'nf', 'nfg', 'ndfr', 'nf', 0, '00:00', 14),
+(11, 'Checking if worked', 'yes', 'no', 'yesandno', 'defino', 'yes', 0, '00:17', 14);
 
 -- --------------------------------------------------------
 
@@ -263,17 +275,21 @@ CREATE TABLE `vacancy` (
   `avgsalary` double DEFAULT NULL,
   `state` int(11) DEFAULT '0',
   `designationid` int(11) DEFAULT NULL,
-  `roletypeid` int(11) DEFAULT NULL
+  `roletypeid` int(11) DEFAULT NULL,
+  `title` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `vacancy`
 --
 
-INSERT INTO `vacancy` (`id`, `cid`, `lastDate`, `Date`, `seats`, `minexperience`, `city`, `avgsalary`, `state`, `designationid`, `roletypeid`) VALUES
-(1, 14, '2019-01-14 23:25:06', '2019-01-04 23:25:06', 4, 1.5, 'Karachi', 75000, 1, 1, 1),
-(2, 14, '2019-01-14 23:25:06', '2019-01-04 23:25:06', 3, 3.5, 'Karachi', 750000, 1, 1, 1),
-(3, 14, '2019-01-14 23:25:06', '2019-01-04 23:25:06', 3, 3.5, 'Hyderabad', 680000, 1, 1, 1);
+INSERT INTO `vacancy` (`id`, `cid`, `lastDate`, `Date`, `seats`, `minexperience`, `city`, `avgsalary`, `state`, `designationid`, `roletypeid`, `title`) VALUES
+(1, 14, '2019-01-14 23:25:06', '2019-01-04 23:25:06', 4, 1.5, 'Karachi', 75000, 1, 1, 2, NULL),
+(2, 14, '2019-01-14 23:25:06', '2019-01-04 23:25:06', 3, 3.5, 'Karachi', 750000, 1, 1, 1, NULL),
+(3, 14, '2019-01-14 23:25:06', '2019-01-04 23:25:06', 3, 3.5, 'Hyderabad', 680000, 1, 1, 1, NULL),
+(4, 14, '2019-10-25', '2019-01-20 21:08:13', 2, 3, 'faislabad', NULL, 0, 2, 1, 'Horror'),
+(5, 14, '2019-01-25', '2019-01-20 21:15:44', 3, 0, 'faislabad', NULL, 1, 1, 2, 'PHP Developer'),
+(6, 14, '2019-01-24', '2019-01-20 21:19:09', 2, 1, 'karachi', 1501, 0, 1, 1, 'Horror IEI');
 
 --
 -- Indexes for dumped tables
@@ -361,12 +377,12 @@ ALTER TABLE `vacancy`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `admin_session`
 --
 ALTER TABLE `admin_session`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `category`
 --
@@ -376,7 +392,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `designation`
 --
@@ -386,7 +402,7 @@ ALTER TABLE `designation`
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `roletype`
 --
@@ -411,7 +427,7 @@ ALTER TABLE `user_session`
 -- AUTO_INCREMENT for table `vacancy`
 --
 ALTER TABLE `vacancy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- Constraints for dumped tables
 --

@@ -5,7 +5,7 @@
          <table class="table table-hover table-bordered" id="questionTable">
             <thead>
                <tr class="warning">
-                  <th id="a">Questions</th>
+                  <th id="a"></th>
                </tr>
             </thead>
             <tbody id="question_body"> 	

@@ -31,7 +31,7 @@ top:20px;
 }
 
 
-#login_div{
+#login_div,#home{
 background:url("../images/bg.png") no-repeat;
 height:735px;
 background-attachment: fixed;
@@ -305,6 +305,16 @@ height:auto !important;
 }
 .checkbox label{
 font-size:15px;
+}
+.btn-yellow{
+background-color:#3040a0;
+border-color:#3040a0;
+color:#fff;
+}
+.btn-yellow:hover,.btn-yellow:focus,.btn-yellow:active{
+background-color:#ffc107;
+border-color:#ffc107;
+color:#1d1d1d;	
 }
 .form_div button{
 background-color:#ffc107;
@@ -618,7 +628,7 @@ color:#1d1d1d;
 text-decoration:none;
 color:#000;	
 }
-#questionTable,#applicantTable{text-align:center;}
+#questionTable,#applicantTable,#adminTable{text-align:center;}
 .table>thead>tr>th {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd;

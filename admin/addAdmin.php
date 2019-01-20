@@ -16,7 +16,7 @@
 										 <a class="alert-link">Refreshing page in <span id="counter"></span>  seconds</a>
 									</div>
 								<div class="inner-addon right-addon">
-									  <i class="glyphicon fa fa-envelope-o"></i>
+									  <i class="glyphicon fa fa-user"></i>
 									  <input type="text" class="form-control" placeholder="Full Name" name="name" required/>
 								  </div>
 								  <div class="inner-addon right-addon">

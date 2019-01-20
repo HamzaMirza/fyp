@@ -50,7 +50,7 @@
                      <li><a href="admin.php?applicants_view">View Applicants</a></li>
                      <li><a href="admin.php?vacancy_view">View Vacancies</a></li>
 					 <li><a href="admin.php?admin_view">View Admins</a></li>
-                     <li><a href="admin.php?vacancy_add">Add Vacancy1</a></li>
+                     <li><a href="admin.php?vacancy_add">Add Vacancy</a></li>
                      <li><a href="admin.php?questions_add">Add Question</a></li>
 					 <li><a href="admin.php?admin_add">Add Admin</a></li>
                   </ul>
@@ -77,10 +77,16 @@
             	include("addquestions.php");
 			else if(isset($_GET['admin_add']))
             	include("addAdmin.php");
+			else if(isset($_GET['vacancy_add']))
+            	include("addvacancies.php");
 			else if(isset($_GET['question_edit']))
             	include("editquestions.php");
             else 
-            	;//include("home.php");
+			{
+				echo '<div id="home">';
+					include("home.php");
+				echo '</div>';
+			}
             ?>
       </section>
       <footer>
